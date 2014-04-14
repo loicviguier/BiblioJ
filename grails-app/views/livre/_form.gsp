@@ -34,14 +34,6 @@
 	<g:field name="nombreExemplairesDisponibles" type="number" value="${livreInstance.nombreExemplairesDisponibles}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'reservations', 'error')} ">
-	<label for="reservations">
-		<g:message code="livre.reservations.label" default="Reservations" />
-		
-	</label>
-	
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: livreInstance, field: 'type', 'error')} required">
 	<label for="type">
 		<g:message code="livre.type.label" default="Type" />
