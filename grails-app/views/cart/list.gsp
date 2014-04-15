@@ -50,7 +50,7 @@
 						
 						<td>
 							<form method="post">
-								<g:actionSubmit class="formulaireBoutonAddCart" action="add" value="Ajouter" />
+								<g:actionSubmit class="formulaireBoutonAddCart" controller="CartController" action="remove" value="Retirer" />
 							</form>
 						</td>
 					

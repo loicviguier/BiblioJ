@@ -99,4 +99,8 @@ class LivreController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def add() {
+		redirect(action: "list")
+	}
 }
