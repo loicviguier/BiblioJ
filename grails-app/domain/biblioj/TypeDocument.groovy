@@ -2,7 +2,6 @@ package biblioj
 
 class TypeDocument {
 	
-
 	String intitul
 	
 	    static constraints = {
