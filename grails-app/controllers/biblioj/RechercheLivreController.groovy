@@ -8,12 +8,19 @@ class RechercheLivreController {
         render(view: "research")
     }
 	
+	def list(Integer max) {
+		params.max = Math.min(max ?: 5, 100)
+		[livreInstanceList: Livre.list(params), livreInstanceTotal: Livre.count()]
+		render(view: "list")
+	}
+	
 
-	def research () {
+	def research (String champRechercheTitreLivre, String champRechercheAuteurLivre, TypeDocument champRechercheTypeLivre) {
 		String titre = params.champRechercheTitreLivre
 		String auteur = params.champRechercheAuteurLivre
 		String type = params.champRechercheTypeLivre
-	// Dispatcher en fonction des params recu
+		
+		System.out.println ('titre : ' + champRechercheTitreLivre + '/ Auteur :' + champRechercheAuteurLivre + '/ Type : ' + champRechercheTypeLivre)
 		
 		def listeLivre = Livre.list()
 		
@@ -36,5 +43,7 @@ class RechercheLivreController {
 			listeLivre = Livre.list()
 			listeLivre = listeLivre.findAll("from Livre as l where l.type like %?%", [type])
 		}
+		
+		redirect('list')
 	}
 }
