@@ -17,7 +17,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="formulaireBoutonSubmit" value="Submit" action="update" />
+					<g:actionSubmit class="formulaireBoutonSubmit" value="Submit" />
 				</fieldset>
 			</g:form>
 		</div>

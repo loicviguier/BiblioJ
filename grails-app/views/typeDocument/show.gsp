@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list typeDocument">
 			
-				<g:if test="${typeDocumentInstance?.inutile}">
+				<g:if test="${typeDocumentInstance?.intitul}">
 				<li class="fieldcontain">
-					<span id="inutile-label" class="property-label"><g:message code="typeDocument.inutile.label" default="Inutile" /></span>
+					<span id="intitul-label" class="property-label"><g:message code="typeDocument.intitul.label" default="Intitul" /></span>
 					
-						<span class="property-value" aria-labelledby="inutile-label"><g:fieldValue bean="${typeDocumentInstance}" field="inutile"/></span>
+						<span class="property-value" aria-labelledby="intitul-label"><g:fieldValue bean="${typeDocumentInstance}" field="intitul"/></span>
 					
 				</li>
 				</g:if>

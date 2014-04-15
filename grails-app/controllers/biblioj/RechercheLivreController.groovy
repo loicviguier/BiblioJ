@@ -5,8 +5,13 @@ class RechercheLivreController {
    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
-        redirect(action: "list", params: params)
+        render(view: "research")
     }
+	
+	// Dispatcher en fonction des params recu
+	def research() {
+		
+	}
 	
 	def rechercheLivreParTitre (paramTitreLivre) {
 		

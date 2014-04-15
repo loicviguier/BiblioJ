@@ -24,7 +24,7 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="inutile" title="${message(code: 'typeDocument.inutile.label', default: 'Inutile')}" />
+						<g:sortableColumn property="intitul" title="${message(code: 'typeDocument.intitul.label', default: 'Intitul')}" />
 					
 					</tr>
 				</thead>
@@ -32,7 +32,7 @@
 				<g:each in="${typeDocumentInstanceList}" status="i" var="typeDocumentInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${typeDocumentInstance.id}">${fieldValue(bean: typeDocumentInstance, field: "inutile")}</g:link></td>
+						<td><g:link action="show" id="${typeDocumentInstance.id}">${fieldValue(bean: typeDocumentInstance, field: "intitul")}</g:link></td>
 					
 					</tr>
 				</g:each>
