@@ -15,5 +15,5 @@
 	<g:select id="type" name="champRechercheTypeLivre"
 		from="${biblioj.TypeDocument.list()}" optionKey="id"
 		value="${livreInstance?.type?.id}" class="many-to-one"
-		noSelection="['null':'- Choose a type -']" />
+		noSelection="['':'- Choose a type -']" />
 </div>

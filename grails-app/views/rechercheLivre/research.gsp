@@ -1,3 +1,4 @@
+<%@ page import="biblioj.Livre" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +13,13 @@
 		</div>
 		<div id="research-livre" class="content" role="main">
 			<h1>Recherche de Livre</h1>
+			
+			<g:if test="${titreInstance==""}">
+				<ul class="errors" role="alert">
+					<li> Champ de recherche par titre vide! </li>
+				</ul>
+			</g:if>
+			
 			<g:form method="post" >
 				<fieldset class="form">
 					<g:render template="form"/>
