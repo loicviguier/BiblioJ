@@ -5,13 +5,15 @@ class RechercheLivreController {
    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
-        redirect(action: "list", params: params)
+        render(view: "research")
     }
 	
+
 	def research () {
 		String titre = params.champRechercheTitreLivre
 		String auteur = params.champRechercheAuteurLivre
 		String type = params.champRechercheTypeLivre
+	// Dispatcher en fonction des params recu
 		
 		def listeLivre = Livre.list()
 		
