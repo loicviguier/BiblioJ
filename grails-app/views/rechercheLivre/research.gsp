@@ -1,3 +1,4 @@
+<%@ page import="biblioj.Livre" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,12 +13,19 @@
 		</div>
 		<div id="research-livre" class="content" role="main">
 			<h1>Recherche de Livre</h1>
-			<g:form name="formulaireRechercheLivre" url="[controller:'RechercheLivreController', action:'research']" >
+			
+			<g:if test="${titreInstance==""}">
+				<ul class="errors" role="alert">
+					<li> Champ de recherche par titre vide! </li>
+				</ul>
+			</g:if>
+			
+			<g:form method="post" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="formulaireBoutonSubmit" value="Submit" />
+					<g:actionSubmit class="formulaireBoutonSubmit" action="research" value="Submit" />
 				</fieldset>
 			</g:form>
 		</div>

@@ -8,33 +8,48 @@ class RechercheLivreController {
         render(view: "research")
     }
 	
+	def list(Integer max) {
+		// TODO : Faire passer une liste d'objet Livre dans livreInstanceList
+		def livreResultantList = params.livreResultantList
+		int tailleLivreResultantList = livreResultantList.size()
+		
+		System.out.println (params.livreResultantList)
+		
+		params.max = Math.min(max ?: 5, 100)
+		[livreInstanceList: livreResultantList, livreInstanceTotal: tailleLivreResultantList ]
+		render(view: "list")
+	}
+	
 
 	def research () {
-		String titre = params.champRechercheTitreLivre
-		String auteur = params.champRechercheAuteurLivre
-		String type = params.champRechercheTypeLivre
-	// Dispatcher en fonction des params recu
 		
-		def listeLivre = Livre.list()
+		String titreRecherche = params.champRechercheTitreLivre
+		String auteurRecherche = params.champRechercheAuteurLivre
+		String typeRecherche = params.champRechercheTypeLivre
 		
-		if(titre != null) {
-			listeLivre = listeLivre.findAll("from Livre as l where l.titre like %?%", [titre])
+		if (!titreRecherche) {
+			render(view: "research", model: [titreInstance: titreRecherche])
+			return
+		}
+		
+		System.out.println (' - Titre : ' + titreRecherche + '\n - Auteur :' + auteurRecherche + '\n - Type : ' + typeRecherche)
+		
+		// TODO : Recherche par bout de titre
+		def livreResultantList = Livre.findAllByTitre(titreRecherche)
+		
+		System.out.println (livreResultantList)
+		
+		// Affinement de la recherche par Auteur
+		if(auteurRecherche != "") {
+			livreResultantList = livreResultantList.findAll("FROM Livre AS l WHERE l.auteurs like %?%", [auteurRecherche])
 		} 
-		if(listeLivre != null) {
-			if(auteur != null) {
-				listeLivre = listeLivre.findAll("from Livre as l where l.auteurs like %?%", [auteur])
-			}
-		} else if(auteur != null){
-			listeLivre = Livre.list()
-			listeLivre = listeLivre.findAll("from Livre as l where l.auteurs like %?%", [auteur])
+		
+		// Affinement de la recherche par Type
+		if(typeRecherche != "") {
+			livreResultantList = livreResultantList.findAll("FROM Livre AS l WHERE l.type like %?%", [typeRecherche])
 		}
-		if(listeLivre != null) {
-			if(type != null) {
-				listeLivre = listeLivre.findAll("from Livre as l where l.type like %?%", [type])
-			}
-		} else if(auteur != null){
-			listeLivre = Livre.list()
-			listeLivre = listeLivre.findAll("from Livre as l where l.type like %?%", [type])
-		}
+		
+		// TODO : Envoyer une liste d'objet Livre en params
+		redirect(action: "list", params: [livreResultantList: livreResultantList])
 	}
 }
