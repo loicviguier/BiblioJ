@@ -1,7 +1,6 @@
 <div class="fieldcontain">
-<label for="champRechercheTitreLivre"> Titre <span
-class="required-indicator">*</span></label>
-<g:textField name="champRechercheTitreLivre" required=""
+<label for="champRechercheTitreLivre"> Titre</label>
+<g:textField name="champRechercheTitreLivre"
 value="" />
 </div>
 

@@ -11,8 +11,10 @@ class LivreController {
     }
 
     def list(Integer max) {
-        params.max = Math.min(max ?: 5, 100)
-        [livreInstanceList: Livre.list(params), livreInstanceTotal: Livre.count()]
+		RechercheLivreService livreResultantList = new RechercheLivreService()
+		
+		params.max = Math.min(max ?: 5, 100)
+		livreResultantList.rechercheLivre(params)
     }
 
     def create() {
@@ -99,4 +101,8 @@ class LivreController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def add() {
+		redirect(action: "list")
+	}
 }

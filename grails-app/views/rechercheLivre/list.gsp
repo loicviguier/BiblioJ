@@ -11,7 +11,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><a class="research" href="${createLink(uri: '/rechercheLivre/index')}"> Recherche </a></li>
+				<li><a class="list" href="${createLink(uri: '/livre/index')}"> Retour à la liste de livre </a></li>
 			</ul>
 		</div>
 		<div id="list-recherche" class="content" role="main">
@@ -36,7 +36,6 @@
 				<tbody>
 				<g:each in="${livreInstanceList}" status="i" var="livreInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
 						<td><g:link action="show" id="${livreInstance.id}">${fieldValue(bean: livreInstance, field: "titre")}</g:link></td>
 					
 						<td>${fieldValue(bean: livreInstance, field: "nombreExemplaires")}</td>
@@ -50,7 +49,7 @@
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${livreInstanceTotal}" />
+				<g:paginate total="${livreInstanceTotal?:0}" params="${params}" />
 			</div>
 		</div>
 	</body>

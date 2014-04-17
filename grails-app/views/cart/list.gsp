@@ -12,7 +12,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><a class="list" href="${createLink(uri: '/rechercheLivre/index')}">Recherche</a></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="list-livre" class="content scaffold-list" role="main">
@@ -39,6 +39,7 @@
 				<tbody>
 				<g:each in="${livreInstanceList}" status="i" var="livreInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
 						<td><g:link action="show" id="${livreInstance.id}">${fieldValue(bean: livreInstance, field: "titre")}</g:link></td>
 					
 						<td>${fieldValue(bean: livreInstance, field: "nombreExemplaires")}</td>
@@ -49,7 +50,7 @@
 						
 						<td>
 							<form method="post">
-								<g:actionSubmit class="formulaireBoutonAddCart" action="add" value="Ajouter" />
+								<g:actionSubmit class="formulaireBoutonAddCart" controller="CartController" action="remove" value="Retirer" />
 							</form>
 						</td>
 					
