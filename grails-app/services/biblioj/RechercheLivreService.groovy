@@ -7,9 +7,6 @@ import org.hibernate.Criteria
 class RechercheLivreService {
 
    	def rechercheLivre(Map params) {
-	   def titreRecherche = params.champRechercheTitreLivre
-	   def auteurRecherche = params.champRechercheAuteurLivre
-	   def typeRecherche = params.champRechercheTypeLivre
 	   if (!params.max) {
 		   params.max = 0
 	   }
@@ -55,9 +52,9 @@ class RechercheLivreService {
 			}
 			
 			if(typeRecherche) {
-				type {
-					ilike("intitul",typeRecherche)
-				}
+				println "Type: " + typeRecherche 
+					createAlias ("type", "typeDoc") 
+					ilike("typeDoc.intitul","%$typeRecherche")
 			}
 		}
 	}

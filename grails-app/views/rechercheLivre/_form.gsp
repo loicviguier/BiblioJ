@@ -12,7 +12,6 @@ value="" />
 <div class="fieldcontain">
 	<label for="champRechercheTypeLivre"> Type </label>
 	<g:select id="type" name="champRechercheTypeLivre"
-		from="${biblioj.TypeDocument.list()}" optionKey="id"
-		value="${livreInstance?.type?.id}" class="many-to-one"
+		from="${biblioj.TypeDocument.list()}"
 		noSelection="['':'- Choose a type -']" />
 </div>
