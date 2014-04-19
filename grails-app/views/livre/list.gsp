@@ -12,10 +12,34 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><a class="list" href="${createLink(uri: '/rechercheLivre/index')}">Recherche</a></li>
+				<li><a class="list" href="${createLink(uri: '/livre/research')}">Recherche</a></li>
 			</ul>
 		</div>
-		<div id="list-livre" class="content scaffold-list" role="main">
+		
+			<g:form controller="livre" >
+					<span>
+					<label for="champRechercheTitreLivre"> Titre</label>
+					<g:textField name="champRechercheTitreLivre"
+					value="" />
+					</span>
+					
+					<span>
+					<label for="champRechercheAuteurLivre"> Auteur </label>
+					<g:textField name="champRechercheAuteurLivre" value="" />
+					</span>
+					
+					<span>
+						<label for="champRechercheTypeLivre"> Type </label>
+						<g:select id="type" name="champRechercheTypeLivre"
+							from="${biblioj.TypeDocument.list()}"
+							noSelection="['':'- Choose a type -']" />
+					</span>
+				<fieldset class="buttons">
+					<g:actionSubmit class="formulaireBoutonSubmit" action="list" value="Submit" />
+				</fieldset>
+			</g:form>
+			
+			<div id="list-livre" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
@@ -49,7 +73,11 @@
 						
 						<td>
 							<form method="post">
-								<g:actionSubmit class="formulaireBoutonAddCart" action="add" value="Ajouter" />
+								<g:if test="${livreInstance.nombreExemplairesDisponibles > 0}">
+									<g:link controller="reservation" action="ajouterLivrePanier" params='[idReservation : "${reservationInstance.id }", idLivre : "${livreInstance.id }"]'>Ajouter</g:link>								</g:if>
+								<g:else>
+									<p>Indisponible</p>
+								</g:else>
 							</form>
 						</td>
 					

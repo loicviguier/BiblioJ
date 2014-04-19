@@ -5,16 +5,10 @@ import java.util.Map;
 import org.hibernate.Criteria
 class LivreService {
 
-	def rechercheLivre(Map params) {
-	   def titreRecherche = params.champRechercheTitreLivre
-	   def auteurRecherche = params.champRechercheAuteurLivre
-	   def typeRecherche = params.champRechercheTypeLivre
-	   if (!params.max) {
-		   params.max = 0
-	   }
+	def rechercheLivre(Map params, Reservation reservation) {
+
 		def livreResultantList = getLivre(params)
-		println livreResultantList
-		[livreInstanceList:livreResultantList, livreInstanceTotal: livreResultantList.totalCount]
+		[livreInstanceList:livreResultantList, livreInstanceTotal: livreResultantList.totalCount, reservationInstance : reservation]
     }
 	
 	def getLivre(Map params) {
@@ -52,9 +46,8 @@ class LivreService {
 			}
 			
 			if(typeRecherche) {
-				type {
-					ilike("intitul",typeRecherche)
-				}
+					createAlias ("type", "typeDoc") 
+					ilike("typeDoc.intitul","%$typeRecherche")
 			}
 		}
 	}

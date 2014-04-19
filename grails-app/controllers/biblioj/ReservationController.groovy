@@ -99,4 +99,12 @@ class ReservationController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def ajouterLivrePanier(long idLivre, long idReservation) {
+		def reservation = Reservation.get(idReservation)
+		def livre = Livre.get(idLivre)
+		reservation.addToLivres(livre)
+		reservation.save()
+		redirect(action: "list",controller : "livre")
+	}
 }

@@ -12,7 +12,7 @@
 				<li><a class="list" href="${createLink(uri: '/livre/index')}"> Retour à la liste de livre </a></li>
 			</ul>
 		</div>
-		<div id="research-livre" class="content" role="main">
+		<div id="research-livre">
 			<h1>Recherche de Livre</h1>
 			
 			<g:form controller="livre" >

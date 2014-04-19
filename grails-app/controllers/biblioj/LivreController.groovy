@@ -11,10 +11,16 @@ class LivreController {
     }
 
     def list(Integer max) {
-		RechercheLivreService livreResultantList = new RechercheLivreService()
-		
 		params.max = Math.min(max ?: 5, 100)
-		livreResultantList.rechercheLivre(params)
+		def reservation = Reservation.get(session.getAttribute("idReservation"))
+		if(reservation == null){
+			ReservationService resServ = new ReservationService()
+			reservation = resServ.createReservation()
+			session.setAttribute("idReservation", reservation.id)
+		}
+		println reservation.livres
+		LivreService livreResultantList = new LivreService()
+		livreResultantList.rechercheLivre(params,reservation)
     }
 
     def create() {
@@ -101,8 +107,4 @@ class LivreController {
             redirect(action: "show", id: id)
         }
     }
-	
-	def add() {
-		redirect(action: "list")
-	}
 }
