@@ -45,7 +45,7 @@ class AuteurControllerTests {
         populateValidParams(params)
         controller.save()
 
-        assert response.redirectedUrl == '/auteur/show/1'
+        assert response.redirectedUrl == '/auteur/show/8'
         assert controller.flash.message != null
         assert Auteur.count() == 1
     }

@@ -3,8 +3,8 @@ package biblioj
 class Livre {
 	
 	String titre
-	int nombreExemplaires
-	int nombreExemplairesDisponibles
+	Integer nombreExemplaires
+	Integer nombreExemplairesDisponibles
 
 	static hasMany = [reservations:Reservation, auteurs:Auteur]
 	static belongsTo = Reservation
@@ -12,7 +12,9 @@ class Livre {
 	
     static constraints = {
 		titre blank:false
-		nombreExemplaires blank:false 
+		nombreExemplaires nullable: false
+		nombreExemplairesDisponibles nullable: false
+		type nullable: false
     }
 	
 	String toString() {

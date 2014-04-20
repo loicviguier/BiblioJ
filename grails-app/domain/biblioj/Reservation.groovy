@@ -2,14 +2,14 @@ package biblioj
 
 class Reservation {
 	
-	int code
+	Integer code
 	Date dateReservation
 
 	static hasMany = [livres:Livre]
 
     static constraints = {
-		code unique:true, blank:false 
-		dateReservation blank:false 
+		code unique:true, nullable: false 
+		dateReservation nullable: false 
     }
 	
 	String toString(){

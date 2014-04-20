@@ -5,7 +5,7 @@ class TypeDocument {
 	String intitul
 	
 	    static constraints = {
-	intitul blank: false
+			intitul blank: false
 	    }
 	
 	String toString(){
