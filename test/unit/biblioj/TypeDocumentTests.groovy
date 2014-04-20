@@ -10,8 +10,28 @@ import org.junit.*
  */
 @TestFor(TypeDocument)
 class TypeDocumentTests {
+   
+	def type
 
-    void testSomething() {
-       fail "Implement me"
-    }
+	void setUp() {
+		mockForConstraintsTests(TypeDocument)
+		type = new TypeDocument(intitul: "new")
+	}
+	
+	void testIntitul() {
+		assert type.intitul == "new"
+	}
+	
+	void testBlank() {
+		type = new TypeDocument(intitul: '')
+		assertFalse type.validate()
+		assertEquals 'Intitul is blank.', 'blank', type.errors['intitul']
+		type = new TypeDocument(intitul: "new")
+		assertTrue type.validate()
+	}
+	
+	void testToString() {
+		assert type.toString() == "new"
+	}
+	
 }

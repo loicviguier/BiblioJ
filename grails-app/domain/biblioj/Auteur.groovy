@@ -13,7 +13,7 @@ class Auteur {
 		nom blank: false
     }
 	
-	 String toString(){
-		 nom + ' ' + prenom
-	 }
+	String toString(){
+		nom + ' ' + prenom
+	}
 }

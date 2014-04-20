@@ -61,6 +61,8 @@
 					</tr>
 				</thead>
 				<tbody>
+				<% if(!session['cart']){ session['cart'] = [] } %>
+				
 				<g:each in="${livreInstanceList}" status="i" var="livreInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 						<td><g:link action="show" id="${livreInstance.id}">${fieldValue(bean: livreInstance, field: "titre")}</g:link></td>
@@ -72,15 +74,12 @@
 						<td>${fieldValue(bean: livreInstance, field: "type")}</td>
 						
 						<td>
-							<form method="post">
+							<g:if test="${session['cart'].find { it.id == livreInstance.id }}">Déjà Ajouté</g:if>
+							<g:else>
 								<g:if test="${livreInstance.nombreExemplairesDisponibles > 0}">
-									<g:link class="buttons" style="text-decoration: none; color: black" controller="cart" action="add" id="${livreInstance.id}">Ajouter</g:link>
-									<%-- params='[idReservation : "${reservationInstance.id }", idLivre : "${livreInstance.id }"]'--%>
-								</g:if>
-								<g:else>
-									<p>Indisponible</p>
-								</g:else>
-							</form>
+									<g:link class="buttons" style="text-decoration: none; color: black" controller="cart" action="add" id="${livreInstance.id}">Ajouter</g:link></g:if>
+								<g:else><p>Indisponible</p></g:else>
+							</g:else>
 						</td>
 					
 					</tr>
