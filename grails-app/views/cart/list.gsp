@@ -25,12 +25,6 @@
 					<tr>
 					
 						<g:sortableColumn property="titre" title="${message(code: 'livre.titre.label', default: 'Titre')}" />
-					
-						<g:sortableColumn property="nombreExemplaires" title="${message(code: 'livre.nombreExemplaires.label', default: 'Nombre Exemplaires')}" />
-					
-						<g:sortableColumn property="nombreExemplairesDisponibles" title="${message(code: 'livre.nombreExemplairesDisponibles.label', default: 'Nombre Exemplaires Disponibles')}" />
-					
-						<th><g:message code="livre.type.label" default="Type" /></th>
 						
 						<th>Panier</th>
 					
@@ -41,17 +35,9 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${livreInstance.id}">${fieldValue(bean: livreInstance, field: "titre")}</g:link></td>
-					
-						<td>${fieldValue(bean: livreInstance, field: "nombreExemplaires")}</td>
-					
-						<td>${fieldValue(bean: livreInstance, field: "nombreExemplairesDisponibles")}</td>
-					
-						<td>${fieldValue(bean: livreInstance, field: "type")}</td>
 						
 						<td>
-							<form method="post">
-								<g:actionSubmit class="formulaireBoutonAddCart" controller="CartController" action="remove" value="Retirer" />
-							</form>
+							<g:link class="buttons" style="text-decoration: none; color: black;" controller="cart" action="remove" id="${i}"> Retirer </g:link>
 						</td>
 					
 					</tr>

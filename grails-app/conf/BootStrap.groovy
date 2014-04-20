@@ -8,7 +8,7 @@ class BootStrap {
 		Auteur vigan = new Auteur(nom: "Vigan", prenom: "Delphine de")
 		Auteur collins = new Auteur(nom: "Collins", prenom: "Suzanne")
 		Auteur stockett = new Auteur(nom: "Stockett", prenom: "Kathryn")
-		Auteur carrere = new Auteur(nom: "Carrére", prenom: "Emmanuel")
+		Auteur carrere = new Auteur(nom: "Carrère", prenom: "Emmanuel")
 		Auteur murakami = new Auteur(nom: "Murakami", prenom: "Haruki")
 		Auteur delacourt = new Auteur(nom: "Delacourt", prenom: "Grégoire")
 		Auteur larsson = new Auteur(nom: "Larsson", prenom: " Stieg")

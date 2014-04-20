@@ -74,7 +74,9 @@
 						<td>
 							<form method="post">
 								<g:if test="${livreInstance.nombreExemplairesDisponibles > 0}">
-									<g:link controller="reservation" action="ajouterLivrePanier" params='[idReservation : "${reservationInstance.id }", idLivre : "${livreInstance.id }"]'>Ajouter</g:link>								</g:if>
+									<g:link class="buttons" style="text-decoration: none; color: black" controller="cart" action="add" id="${livreInstance.id}">Ajouter</g:link>
+									<%-- params='[idReservation : "${reservationInstance.id }", idLivre : "${livreInstance.id }"]'--%>
+								</g:if>
 								<g:else>
 									<p>Indisponible</p>
 								</g:else>
