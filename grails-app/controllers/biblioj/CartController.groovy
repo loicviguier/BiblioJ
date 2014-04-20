@@ -11,8 +11,6 @@ class CartController {
 	def list(Integer max){
 		params.max = Math.min(max ?: 5, 100)
 		
-		println session['cart']
-		
 		if(!session['cart']){
 			[livreInstanceList: [], livreInstanceTotal: 0]
 		} else {
@@ -22,7 +20,6 @@ class CartController {
 	
 	def add(Long id) {
 		Livre livreInstance = Livre.get(id)
-		livreInstance.nombreExemplairesDisponibles --
 		
 		if(!session['cart']){
 			session['cart'] = []
@@ -33,12 +30,10 @@ class CartController {
 		redirect(action: "list",controller : "livre")
 	}
 	
-	def remove(Long id){
+	def remove(Long id) {
 		int index = id
 		def livreInstanceList = session['cart']
 		Livre livreInstance = livreInstanceList[index]
-		
-		livreInstance.nombreExemplairesDisponibles ++
 		
 		if(session['cart'].size() > 1){
 			session['cart'].remove(index)
@@ -48,4 +43,12 @@ class CartController {
 		
 		redirect(action: "list")
 	}
+	
+	// TODO: Implémenter le save pour la reservation
+	def save() {
+		// Ne pas sauvegardé tout court si il existe des livre avec un nb d'exemplaire = 0 et revenir sur le panier
+		// Décrémenter au moment de la sauvegarde
+		// TODO: Une fois le panier traité -> session.removeAttribute('cart')
+	}
+	
 }

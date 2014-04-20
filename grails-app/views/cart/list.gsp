@@ -12,7 +12,6 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="list-livre" class="content scaffold-list" role="main">
@@ -26,6 +25,8 @@
 					
 						<g:sortableColumn property="titre" title="${message(code: 'livre.titre.label', default: 'Titre')}" />
 						
+						<th>Statut</th>
+						
 						<th>Panier</th>
 					
 					</tr>
@@ -36,6 +37,12 @@
 					
 						<td><g:link action="show" id="${livreInstance.id}">${fieldValue(bean: livreInstance, field: "titre")}</g:link></td>
 						
+						<g:if test="${livreInstance.nombreExemplairesDisponibles > 0}">
+							<td>Disponible</td>
+						</g:if><g:else>
+							<td>Indisponible</td>
+						</g:else>
+						
 						<td>
 							<g:link class="buttons" style="text-decoration: none; color: black;" controller="cart" action="remove" id="${i}"> Retirer </g:link>
 						</td>
@@ -44,9 +51,9 @@
 				</g:each>
 				</tbody>
 			</table>
-			<div class="pagination">
-				<g:paginate total="${livreInstanceTotal}" />
-			</div>
+			<fieldset class="buttons">
+				<g:actionSubmit class="save" controller="cart" action="save" value="Save"/>
+			</fieldset>
 		</div>
 	</body>
 </html>
