@@ -91,11 +91,11 @@
 			<h1>Bienvenu sur BiblioJ</h1>
 
 			<div id="controller-list" role="navigation">
-				<h2>Consulter les pages :</h2>
+				<h2>Acceder aux pages :</h2>
 				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.name}</g:link></li>
-					</g:each>
+					<li><g:link class="controller" controller="livre" action="index">Livres en rayon</g:link></li>
+					<li><g:link class="controller" controller="auteur" action="index">Auteurs</g:link></li>
+					<li><g:link class="controller" controller="cart" action="index">Panier</g:link></li>
 				</ul>
 			</div>
 		</div>
