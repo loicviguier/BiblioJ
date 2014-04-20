@@ -52,7 +52,7 @@
 				</tbody>
 			</table>
 			<fieldset class="buttons">
-				<g:actionSubmit class="save" controller="cart" action="save" value="Save"/>
+				<g:actionSubmit class="save" controller="reservation" action="save" value="Valider la reservation"/>
 			</fieldset>
 		</div>
 	</body>

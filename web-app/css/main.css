@@ -35,12 +35,16 @@ html.no-cssgradients {
 html * {
 	margin: 0;
 }
+#panier{
+    float: right;
+    margin-left: 915px;
+}
 
 body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 900px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
@@ -92,6 +96,31 @@ img {
 #grailsLogo a {
 	display: inline-block;
 	margin: 1em;
+}
+
+
+#panier{
+    width: 200px;
+    position:absolute;
+    background-color: rgba(218, 233, 234, 1);
+    color: #333333;
+    border-radius: 10px;
+}
+
+#titrePanier {
+    padding: 10px;
+    padding-top: 30px;
+    height: 40px;
+    color: rgba(47, 91, 216, 1);
+    font-size: large;
+    text-transform: uppercase;
+    background-color: rgba(168, 185, 126, 0.36);
+    text-align: center;
+}
+
+#contenuPanier {
+    padding: 15px;
+    background-color: #fff;
 }
 
 .content {

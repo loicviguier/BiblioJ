@@ -18,11 +18,39 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><img src="${resource(dir: 'images', file: 'Logo-BnF.png')}" alt="Grails" width="100" height="100"/>Bibliothèque nationale de France</a></div>
+		<div id="panier">
+			<div id="titrePanier">Le panier :</div>
+			<div id="contenuPanier">
+				<g:if test="${session.getAttribute("cart").size() > 0}">
+					<table>
+						<g:each in="${session.getAttribute("cart")}" status="i" var="livre">
+							<tr>
+								<td>${fieldValue(bean: livre, field: "titre")}</td>
+								<td>
+									<g:link class="buttons" style="text-decoration: none; color: black;" controller="cart" action="remove" id="${i}"> Retirer </g:link>
+								</td>
+							</tr>
+						</g:each>
+					</table>
+				</g:if>
+				<g:else>
+					<table>
+						<tr>
+							<td> Votre panier est vide </td>
+						</tr>
+					</table>
+				</g:else>
+			</div>
+		</div>
+	
+	
+	
+		<div id="grailsLogo" role="banner"><img src="${resource(dir: 'images', file: 'Logo-BnF.png')}" alt="Grails" width="100" height="100"/>Bibliothèque nationale de France</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
 		<r:layoutResources />
+		
 	</body>
 </html>

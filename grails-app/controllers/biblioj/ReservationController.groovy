@@ -100,11 +100,21 @@ class ReservationController {
         }
     }
 	
-	def ajouterLivrePanier(long idLivre, long idReservation) {
+	def ajouterLivreReservation(long idReservation) {
 		def reservation = Reservation.get(idReservation)
-		def livre = Livre.get(idLivre)
-		reservation.addToLivres(livre)
+		def livre = session['cart']
+		
+		livre.each {
+			if(it.nombreExemplairesDisponibles > 0) {
+				it.nombreExemplairesDisponibles --
+				reservation.addToLivres(it)
+			}
+		}
 		reservation.save()
 		redirect(action: "list",controller : "livre")
+	}
+	
+	def validerReservation (long idReservation) {
+		def reservation = Reservation.get(idReservation)
 	}
 }
