@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="stage" name="biblioj.LivreServiceTests" tests="1" time="0.218" timestamp="2014-04-22T08:29:38">
+  <properties />
+  <testcase classname="biblioj.LivreServiceTests" name="testSomething" time="0.033">
+    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at biblioj.LivreServiceTests.testSomething(LivreServiceTests.groovy:15)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>

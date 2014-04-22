@@ -1,0 +1,19 @@
+Testsuite: biblioj.ReservationTests
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0,792 sec
+------------- Standard Output ---------------
+--Output from testNullable--
+--Output from testCode--
+--Output from testDateReservation--
+--Output from testUnique--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testNullable--
+--Output from testCode--
+--Output from testDateReservation--
+--Output from testUnique--
+------------- ---------------- ---------------
+
+Testcase: testNullable took 0,083 sec
+Testcase: testCode took 0,027 sec
+Testcase: testDateReservation took 0,044 sec
+Testcase: testUnique took 0,441 sec

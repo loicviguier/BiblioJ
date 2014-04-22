@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="stage" name="biblioj.ReservationControllerTests" tests="8" time="1.74" timestamp="2014-04-22T08:29:40">
+  <properties />
+  <testcase classname="biblioj.ReservationControllerTests" name="testIndex" time="0.59" />
+  <testcase classname="biblioj.ReservationControllerTests" name="testList" time="0.162" />
+  <testcase classname="biblioj.ReservationControllerTests" name="testCreate" time="0.135" />
+  <testcase classname="biblioj.ReservationControllerTests" name="testSave" time="0.14">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/reservation/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1c8cd04&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/reservation/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1c8cd04
+
+	at biblioj.ReservationControllerTests.testSave(ReservationControllerTests.groovy:58)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.ReservationControllerTests" name="testDelete" time="0.119">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       biblioj.Reservation@1989b88 (toString() threw groovy.lang.MissingMethodException)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       biblioj.Reservation@1989b88 (toString() threw groovy.lang.MissingMethodException)
+
+	at biblioj.ReservationControllerTests.testDelete(ReservationControllerTests.groovy:154)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.ReservationControllerTests" name="testShow" time="0.135">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       biblioj.Reservation@b1efc4 (toString() threw groovy.lang.MissingMethodException)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       biblioj.Reservation@b1efc4 (toString() threw groovy.lang.MissingMethodException)
+
+	at biblioj.ReservationControllerTests.testShow(ReservationControllerTests.groovy:72)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.ReservationControllerTests" name="testEdit" time="0.135">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       biblioj.Reservation@1ad956d (toString() threw groovy.lang.MissingMethodException)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       biblioj.Reservation@1ad956d (toString() threw groovy.lang.MissingMethodException)
+
+	at biblioj.ReservationControllerTests.testEdit(ReservationControllerTests.groovy:90)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.ReservationControllerTests" name="testUpdate" time="0.132">
+    <failure message="Assertion failed: &#xa;&#xa;assert reservation.save() != null&#xa;       |           |      |&#xa;       |           null   false&#xa;       biblioj.Reservation@10452d6 (toString() threw groovy.lang.MissingMethodException)&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert reservation.save() != null
+       |           |      |
+       |           null   false
+       biblioj.Reservation@10452d6 (toString() threw groovy.lang.MissingMethodException)
+
+	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:110)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testDelete--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testDelete--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+]]></system-err>
+</testsuite>

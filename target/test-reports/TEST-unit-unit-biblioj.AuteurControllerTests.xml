@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="5" failures="0" hostname="stage" name="biblioj.AuteurControllerTests" tests="8" time="5.15" timestamp="2014-04-22T08:29:30">
+  <properties />
+  <testcase classname="biblioj.AuteurControllerTests" name="testIndex" time="2.089" />
+  <testcase classname="biblioj.AuteurControllerTests" name="testList" time="1.475" />
+  <testcase classname="biblioj.AuteurControllerTests" name="testCreate" time="0.206">
+    <error message="No signature of method: biblioj.AuteurController.create() is applicable for argument types: () values: []&#xa;Possible solutions: grep(), chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.create() is applicable for argument types: () values: []
+Possible solutions: grep(), chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map)
+	at biblioj.AuteurControllerTests.testCreate(AuteurControllerTests.groovy:39)
+</error>
+  </testcase>
+  <testcase classname="biblioj.AuteurControllerTests" name="testSave" time="0.109">
+    <error message="No signature of method: biblioj.AuteurController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), show(), any(), wait(long), show(java.lang.Long), sleep(long)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.save() is applicable for argument types: () values: []
+Possible solutions: wait(), show(), any(), wait(long), show(java.lang.Long), sleep(long)
+	at biblioj.AuteurControllerTests.testSave(AuteurControllerTests.groovy:45)
+</error>
+  </testcase>
+  <testcase classname="biblioj.AuteurControllerTests" name="testDelete" time="0.322">
+    <error message="No signature of method: biblioj.AuteurController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.delete() is applicable for argument types: () values: []
+Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
+	at biblioj.AuteurControllerTests.testDelete(AuteurControllerTests.groovy:142)
+</error>
+  </testcase>
+  <testcase classname="biblioj.AuteurControllerTests" name="testShow" time="0.486" />
+  <testcase classname="biblioj.AuteurControllerTests" name="testEdit" time="0.118">
+    <error message="No signature of method: biblioj.AuteurController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), list(), list(java.lang.Integer), print(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), list(), list(java.lang.Integer), print(java.lang.Object)
+	at biblioj.AuteurControllerTests.testEdit(AuteurControllerTests.groovy:79)
+</error>
+  </testcase>
+  <testcase classname="biblioj.AuteurControllerTests" name="testUpdate" time="0.1">
+    <error message="No signature of method: biblioj.AuteurController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), isCase(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.update() is applicable for argument types: () values: []
+Possible solutions: putAt(java.lang.String, java.lang.Object), isCase(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)
+	at biblioj.AuteurControllerTests.testUpdate(AuteurControllerTests.groovy:97)
+</error>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testDelete--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testDelete--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+]]></system-err>
+</testsuite>

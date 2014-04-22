@@ -21,6 +21,7 @@
 		<div id="panier">
 			<div id="titrePanier">Le panier :</div>
 			<div id="contenuPanier">
+				<g:if test="${session.getAttribute("cart") != null}">
 				<g:if test="${session.getAttribute("cart").size() > 0}">
 					<table>
 						<g:each in="${session.getAttribute("cart")}" status="i" var="livre">
@@ -40,6 +41,7 @@
 						</tr>
 					</table>
 				</g:else>
+				</g:if>
 			</div>
 		</div>
 	

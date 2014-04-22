@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="stage" name="biblioj.LivreTests" tests="7" time="0.505" timestamp="2014-04-22T08:29:39">
+  <properties />
+  <testcase classname="biblioj.LivreTests" name="testNullable" time="0.155" />
+  <testcase classname="biblioj.LivreTests" name="testBlank" time="0.048" />
+  <testcase classname="biblioj.LivreTests" name="testToString" time="0.034" />
+  <testcase classname="biblioj.LivreTests" name="testTitre" time="0.021" />
+  <testcase classname="biblioj.LivreTests" name="testNombreExemplaires" time="0.018" />
+  <testcase classname="biblioj.LivreTests" name="testNombreExemplairesDisponibles" time="0.018" />
+  <testcase classname="biblioj.LivreTests" name="testType" time="0.019" />
+  <system-out><![CDATA[--Output from testNullable--
+--Output from testBlank--
+--Output from testToString--
+--Output from testTitre--
+--Output from testNombreExemplaires--
+--Output from testNombreExemplairesDisponibles--
+--Output from testType--
+]]></system-out>
+  <system-err><![CDATA[--Output from testNullable--
+--Output from testBlank--
+--Output from testToString--
+--Output from testTitre--
+--Output from testNombreExemplaires--
+--Output from testNombreExemplairesDisponibles--
+--Output from testType--
+]]></system-err>
+</testsuite>

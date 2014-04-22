@@ -1,0 +1,28 @@
+Testsuite: biblioj.LivreTests
+Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0,505 sec
+------------- Standard Output ---------------
+--Output from testNullable--
+--Output from testBlank--
+--Output from testToString--
+--Output from testTitre--
+--Output from testNombreExemplaires--
+--Output from testNombreExemplairesDisponibles--
+--Output from testType--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testNullable--
+--Output from testBlank--
+--Output from testToString--
+--Output from testTitre--
+--Output from testNombreExemplaires--
+--Output from testNombreExemplairesDisponibles--
+--Output from testType--
+------------- ---------------- ---------------
+
+Testcase: testNullable took 0,155 sec
+Testcase: testBlank took 0,048 sec
+Testcase: testToString took 0,034 sec
+Testcase: testTitre took 0,021 sec
+Testcase: testNombreExemplaires took 0,018 sec
+Testcase: testNombreExemplairesDisponibles took 0,018 sec
+Testcase: testType took 0,019 sec

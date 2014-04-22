@@ -1,0 +1,19 @@
+Testsuite: biblioj.AuteurTests
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0,478 sec
+------------- Standard Output ---------------
+--Output from testNom--
+--Output from testToString--
+--Output from testPrenom--
+--Output from testBlanks--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testNom--
+--Output from testToString--
+--Output from testPrenom--
+--Output from testBlanks--
+------------- ---------------- ---------------
+
+Testcase: testNom took 0,097 sec
+Testcase: testToString took 0,045 sec
+Testcase: testPrenom took 0,032 sec
+Testcase: testBlanks took 0,074 sec

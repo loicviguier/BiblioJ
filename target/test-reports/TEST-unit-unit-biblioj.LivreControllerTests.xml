@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="stage" name="biblioj.LivreControllerTests" tests="8" time="2.162" timestamp="2014-04-22T08:29:35">
+  <properties />
+  <testcase classname="biblioj.LivreControllerTests" name="testIndex" time="0.47" />
+  <testcase classname="biblioj.LivreControllerTests" name="testList" time="0.207" />
+  <testcase classname="biblioj.LivreControllerTests" name="testCreate" time="0.115" />
+  <testcase classname="biblioj.LivreControllerTests" name="testSave" time="0.359">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@354b78&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/livre/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@354b78
+
+	at biblioj.LivreControllerTests.testSave(LivreControllerTests.groovy:60)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.LivreControllerTests" name="testDelete" time="0.274">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       Hunger games, nombre d&apos;exemplaire : 3
+
+	at biblioj.LivreControllerTests.testDelete(LivreControllerTests.groovy:156)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.LivreControllerTests" name="testShow" time="0.201">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       Hunger games, nombre d&apos;exemplaire : 3
+
+	at biblioj.LivreControllerTests.testShow(LivreControllerTests.groovy:74)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.LivreControllerTests" name="testEdit" time="0.14">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       Hunger games, nombre d&apos;exemplaire : 3
+
+	at biblioj.LivreControllerTests.testEdit(LivreControllerTests.groovy:92)
+</failure>
+  </testcase>
+  <testcase classname="biblioj.LivreControllerTests" name="testUpdate" time="0.201">
+    <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert livre.save() != null
+       |     |      |
+       |     null   false
+       Hunger games, nombre d&apos;exemplaire : 3
+
+	at biblioj.LivreControllerTests.testUpdate(LivreControllerTests.groovy:112)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testDelete--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testDelete--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+]]></system-err>
+</testsuite>
