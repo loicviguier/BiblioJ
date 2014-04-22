@@ -4,6 +4,7 @@ package biblioj
 
 import org.junit.*
 import grails.test.mixin.*
+import java.sql.Timestamp
 
 @TestFor(AuteurController)
 @Mock(Auteur)
@@ -19,7 +20,8 @@ class AuteurControllerTests {
 	def populateInalidParams(params) {
 		assert params != null
 		// TODO: Populate valid properties like...
-		params["nom"] = 'Vigan'
+		params["nom"] = ''
+		params["prenom"] = 'Delphine de'
 	}
 
     void testIndex() {
@@ -52,7 +54,7 @@ class AuteurControllerTests {
         populateValidParams(params)
         controller.save()
 
-        assert response.redirectedUrl == '/auteur/show/8'
+        assert response.redirectedUrl == '/auteur/show/1'
         assert controller.flash.message != null
         assert Auteur.count() == 1
     }
@@ -128,9 +130,9 @@ class AuteurControllerTests {
         auteur.clearErrors()
 
         populateValidParams(params)
-        params.id = auteur.id
+		params.id = auteur.id
         params.version = -1
-        controller.update()
+        controller.update(auteur.id, new Timestamp(new Date().getDate()-24))
 
         assert view == "/auteur/edit"
         assert model.auteurInstance != null

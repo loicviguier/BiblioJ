@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="stage" name="biblioj.TypeDocumentTests" tests="3" time="0.417" timestamp="2014-04-22T08:57:08">
+<testsuite errors="0" failures="0" hostname="stage" name="biblioj.TypeDocumentTests" tests="3" time="0.532" timestamp="2014-04-22T22:15:33">
   <properties />
-  <testcase classname="biblioj.TypeDocumentTests" name="testIntitul" time="0.22" />
-  <testcase classname="biblioj.TypeDocumentTests" name="testBlank" time="0.051" />
-  <testcase classname="biblioj.TypeDocumentTests" name="testToString" time="0.02" />
+  <testcase classname="biblioj.TypeDocumentTests" name="testIntitul" time="0.278" />
+  <testcase classname="biblioj.TypeDocumentTests" name="testBlank" time="0.072" />
+  <testcase classname="biblioj.TypeDocumentTests" name="testToString" time="0.058" />
   <system-out><![CDATA[--Output from testIntitul--
 --Output from testBlank--
 --Output from testToString--

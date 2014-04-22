@@ -1,85 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="5" failures="0" hostname="stage" id="0" name="AuteurControllerTests" package="biblioj" tests="8" time="3.868" timestamp="2014-04-22T08:57:01">
+  <testsuite errors="1" failures="0" hostname="stage" id="0" name="AuteurControllerTests" package="biblioj" tests="8" time="6.394" timestamp="2014-04-22T22:15:25">
       <properties />
 
-      <testcase classname="biblioj.AuteurControllerTests" name="testIndex" time="1.306" />
+      <testcase classname="biblioj.AuteurControllerTests" name="testIndex" time="1.76" />
 
-      <testcase classname="biblioj.AuteurControllerTests" name="testList" time="1.168" />
+      <testcase classname="biblioj.AuteurControllerTests" name="testSave" time="2.969" />
 
-      <testcase classname="biblioj.AuteurControllerTests" name="testShow" time="0.476" />
+      <testcase classname="biblioj.AuteurControllerTests" name="testCreate" time="0.192" />
 
-      <testcase classname="biblioj.AuteurControllerTests" name="testCreate" time="0.301">
-          <error message="No signature of method: biblioj.AuteurController.create() is applicable for argument types: () values: []&#xa;Possible solutions: grep(), chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.create() is applicable for argument types: () values: []
-Possible solutions: grep(), chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map)
-	at biblioj.AuteurControllerTests.testCreate(AuteurControllerTests.groovy:39)
+      <testcase classname="biblioj.AuteurControllerTests" name="testShow" time="0.254" />
+
+      <testcase classname="biblioj.AuteurControllerTests" name="testEdit" time="0.18" />
+
+      <testcase classname="biblioj.AuteurControllerTests" name="testUpdate" time="0.297">
+          <error message="No signature of method: biblioj.AuteurController.update() is applicable for argument types: (java.lang.Long, java.sql.Timestamp) values: [1, 1970-01-01 00:59:59.999]&#xa;Possible solutions: update(), update(java.lang.Long, java.lang.Long), create(), delete(), edit(), save()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.update() is applicable for argument types: (java.lang.Long, java.sql.Timestamp) values: [1, 1970-01-01 00:59:59.999]
+Possible solutions: update(), update(java.lang.Long, java.lang.Long), create(), delete(), edit(), save()
+	at biblioj.AuteurControllerTests.testUpdate(AuteurControllerTests.groovy:135)
 </error>
 
       </testcase>
 
-      <testcase classname="biblioj.AuteurControllerTests" name="testSave" time="0.106">
-          <error message="No signature of method: biblioj.AuteurController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), show(), any(), wait(long), show(java.lang.Long), any(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.save() is applicable for argument types: () values: []
-Possible solutions: wait(), show(), any(), wait(long), show(java.lang.Long), any(groovy.lang.Closure)
-	at biblioj.AuteurControllerTests.testSave(AuteurControllerTests.groovy:45)
-</error>
+      <testcase classname="biblioj.AuteurControllerTests" name="testDelete" time="0.248" />
 
-      </testcase>
-
-      <testcase classname="biblioj.AuteurControllerTests" name="testEdit" time="0.098">
-          <error message="No signature of method: biblioj.AuteurController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), list(), list(java.lang.Integer), with(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.edit() is applicable for argument types: () values: []
-Possible solutions: wait(), wait(long), wait(long, int), list(), list(java.lang.Integer), with(groovy.lang.Closure)
-	at biblioj.AuteurControllerTests.testEdit(AuteurControllerTests.groovy:79)
-</error>
-
-      </testcase>
-
-      <testcase classname="biblioj.AuteurControllerTests" name="testUpdate" time="0.14">
-          <error message="No signature of method: biblioj.AuteurController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), isCase(java.lang.Object), use([Ljava.lang.Object;), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.update() is applicable for argument types: () values: []
-Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), isCase(java.lang.Object), use([Ljava.lang.Object;), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)
-	at biblioj.AuteurControllerTests.testUpdate(AuteurControllerTests.groovy:97)
-</error>
-
-      </testcase>
-
-      <testcase classname="biblioj.AuteurControllerTests" name="testDelete" time="0.096">
-          <error message="No signature of method: biblioj.AuteurController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.delete() is applicable for argument types: () values: []
-Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
-	at biblioj.AuteurControllerTests.testDelete(AuteurControllerTests.groovy:142)
-</error>
-
-      </testcase>
+      <testcase classname="biblioj.AuteurControllerTests" name="testList" time="0.234" />
 
       <system-out><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-out>
 
       <system-err><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="stage" id="1" name="AuteurTests" package="biblioj" tests="4" time="0.406" timestamp="2014-04-22T08:57:09">
+  <testsuite errors="0" failures="0" hostname="stage" id="1" name="AuteurTests" package="biblioj" tests="4" time="0.385" timestamp="2014-04-22T22:15:34">
       <properties />
 
-      <testcase classname="biblioj.AuteurTests" name="testToString" time="0.112" />
+      <testcase classname="biblioj.AuteurTests" name="testToString" time="0.161" />
 
       <testcase classname="biblioj.AuteurTests" name="testNom" time="0.02" />
 
       <testcase classname="biblioj.AuteurTests" name="testPrenom" time="0.02" />
 
-      <testcase classname="biblioj.AuteurTests" name="testBlanks" time="0.035" />
+      <testcase classname="biblioj.AuteurTests" name="testBlanks" time="0.044" />
 
       <system-out><![CDATA[--Output from testToString--
 --Output from testNom--
@@ -94,31 +70,64 @@ Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), ever
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="stage" id="2" name="CartControllerTests" package="biblioj" tests="1" time="4.838" timestamp="2014-04-22T08:56:56">
+  <testsuite errors="2" failures="0" hostname="stage" id="2" name="CartControllerTests" package="biblioj" tests="4" time="6.996" timestamp="2014-04-22T22:15:18">
       <properties />
 
-      <testcase classname="biblioj.CartControllerTests" name="testSomething" time="3.959">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at biblioj.CartControllerTests.testSomething(CartControllerTests.groovy:15)
+      <testcase classname="biblioj.CartControllerTests" name="testRemove" time="4.453">
+          <error message="Cannot cast object &apos;null&apos; with class &apos;null&apos; to class &apos;int&apos;. Try &apos;java.lang.Integer&apos; instead" type="org.codehaus.groovy.runtime.typehandling.GroovyCastException">org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object &apos;null&apos; with class &apos;null&apos; to class &apos;int&apos;. Try &apos;java.lang.Integer&apos; instead
+	at biblioj.CartController.remove(CartController.groovy:34)
+	at biblioj.CartControllerTests.testRemove(CartControllerTests.groovy:54)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.CartControllerTests" name="testAdd" time="0.232">
+          <error message="No signature of method: biblioj.Livre.get() is applicable for argument types: () values: []&#xa;Possible solutions: get(java.io.Serializable), getId(), grep(), grep(java.lang.Object), getAt(java.lang.String), wait()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.Livre.get() is applicable for argument types: () values: []
+Possible solutions: get(java.io.Serializable), getId(), grep(), grep(java.lang.Object), getAt(java.lang.String), wait()
+	at biblioj.CartController.add(CartController.groovy:22)
+	at biblioj.CartControllerTests.testAdd(CartControllerTests.groovy:39)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.CartControllerTests" name="testIndex" time="0.911" />
+
+      <testcase classname="biblioj.CartControllerTests" name="testList" time="0.29" />
+
+      <system-out><![CDATA[--Output from testRemove--
+--Output from testAdd--
+--Output from testIndex--
+--Output from testList--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testRemove--
+--Output from testAdd--
+--Output from testIndex--
+--Output from testList--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="5" hostname="stage" id="3" name="LivreControllerTests" package="biblioj" tests="8" time="2.044" timestamp="2014-04-22T22:15:31">
+      <properties />
+
+      <testcase classname="biblioj.LivreControllerTests" name="testIndex" time="0.497" />
+
+      <testcase classname="biblioj.LivreControllerTests" name="testSave" time="0.222">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12258bc&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/livre/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12258bc
+
+	at biblioj.LivreControllerTests.testSave(LivreControllerTests.groovy:60)
 </failure>
 
       </testcase>
 
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
+      <testcase classname="biblioj.LivreControllerTests" name="testCreate" time="0.275" />
 
-      <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="5" hostname="stage" id="3" name="LivreControllerTests" package="biblioj" tests="8" time="3.188" timestamp="2014-04-22T08:57:05">
-      <properties />
-
-      <testcase classname="biblioj.LivreControllerTests" name="testIndex" time="0.424" />
-
-      <testcase classname="biblioj.LivreControllerTests" name="testList" time="0.143" />
-
-      <testcase classname="biblioj.LivreControllerTests" name="testShow" time="0.206">
+      <testcase classname="biblioj.LivreControllerTests" name="testShow" time="0.197">
           <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert livre.save() != null
@@ -131,22 +140,7 @@ assert livre.save() != null
 
       </testcase>
 
-      <testcase classname="biblioj.LivreControllerTests" name="testCreate" time="0.106" />
-
-      <testcase classname="biblioj.LivreControllerTests" name="testSave" time="1.757">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/livre/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@7953ef&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert response.redirectedUrl == &apos;/livre/show/1&apos;
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@7953ef
-
-	at biblioj.LivreControllerTests.testSave(LivreControllerTests.groovy:60)
-</failure>
-
-      </testcase>
-
-      <testcase classname="biblioj.LivreControllerTests" name="testEdit" time="0.108">
+      <testcase classname="biblioj.LivreControllerTests" name="testEdit" time="0.138">
           <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert livre.save() != null
@@ -159,7 +153,7 @@ assert livre.save() != null
 
       </testcase>
 
-      <testcase classname="biblioj.LivreControllerTests" name="testUpdate" time="0.155">
+      <testcase classname="biblioj.LivreControllerTests" name="testUpdate" time="0.113">
           <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert livre.save() != null
@@ -172,7 +166,7 @@ assert livre.save() != null
 
       </testcase>
 
-      <testcase classname="biblioj.LivreControllerTests" name="testDelete" time="0.133">
+      <testcase classname="biblioj.LivreControllerTests" name="testDelete" time="0.11">
           <failure message="Assertion failed: &#xa;&#xa;assert livre.save() != null&#xa;       |     |      |&#xa;       |     null   false&#xa;       Hunger games, nombre d&apos;exemplaire : 3&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert livre.save() != null
@@ -185,140 +179,225 @@ assert livre.save() != null
 
       </testcase>
 
+      <testcase classname="biblioj.LivreControllerTests" name="testList" time="0.241" />
+
       <system-out><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-out>
 
       <system-err><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="stage" id="4" name="LivreServiceTests" package="biblioj" tests="1" time="0.185" timestamp="2014-04-22T08:57:08">
+  <testsuite errors="10" failures="0" hostname="stage" id="4" name="LivreServiceTests" package="biblioj" tests="10" time="0.436" timestamp="2014-04-22T22:15:34">
       <properties />
 
-      <testcase classname="biblioj.LivreServiceTests" name="testSomething" time="0.046">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at biblioj.LivreServiceTests.testSomething(LivreServiceTests.groovy:15)
-</failure>
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivrePrenom" time="0.035">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivrePrenom(LivreServiceTests.groovy:43)
+</error>
 
       </testcase>
 
-      <system-out><![CDATA[--Output from testSomething--
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreNomPrenom" time="0.019">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNomPrenom(LivreServiceTests.groovy:50)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreNomPrenomAucun" time="0.01">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNomPrenomAucun(LivreServiceTests.groovy:57)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreType" time="0.01">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreType(LivreServiceTests.groovy:64)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreOffset" time="0.011">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOffset(LivreServiceTests.groovy:71)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreOrder" time="0.022">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOrder(LivreServiceTests.groovy:79)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreSort" time="0.039">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreSort(LivreServiceTests.groovy:85)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreOrderSort" time="0.027">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOrderSort(LivreServiceTests.groovy:91)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreTitre" time="0.017">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreTitre(LivreServiceTests.groovy:29)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreNom" time="0.027">
+          <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNom(LivreServiceTests.groovy:36)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testrechercheLivrePrenom--
+--Output from testrechercheLivreNomPrenom--
+--Output from testrechercheLivreNomPrenomAucun--
+--Output from testrechercheLivreType--
+--Output from testrechercheLivreOffset--
+--Output from testrechercheLivreOrder--
+--Output from testrechercheLivreSort--
+--Output from testrechercheLivreOrderSort--
+--Output from testrechercheLivreTitre--
+--Output from testrechercheLivreNom--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testSomething--
+      <system-err><![CDATA[--Output from testrechercheLivrePrenom--
+--Output from testrechercheLivreNomPrenom--
+--Output from testrechercheLivreNomPrenomAucun--
+--Output from testrechercheLivreType--
+--Output from testrechercheLivreOffset--
+--Output from testrechercheLivreOrder--
+--Output from testrechercheLivreSort--
+--Output from testrechercheLivreOrderSort--
+--Output from testrechercheLivreTitre--
+--Output from testrechercheLivreNom--
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="stage" id="5" name="LivreTests" package="biblioj" tests="7" time="0.444" timestamp="2014-04-22T08:57:09">
+  <testsuite errors="0" failures="0" hostname="stage" id="5" name="LivreTests" package="biblioj" tests="7" time="0.524" timestamp="2014-04-22T22:15:34">
       <properties />
 
-      <testcase classname="biblioj.LivreTests" name="testBlank" time="0.148" />
+      <testcase classname="biblioj.LivreTests" name="testNullable" time="0.156" />
 
-      <testcase classname="biblioj.LivreTests" name="testToString" time="0.028" />
+      <testcase classname="biblioj.LivreTests" name="testBlank" time="0.025" />
+
+      <testcase classname="biblioj.LivreTests" name="testToString" time="0.021" />
 
       <testcase classname="biblioj.LivreTests" name="testTitre" time="0.019" />
 
-      <testcase classname="biblioj.LivreTests" name="testNombreExemplaires" time="0.018" />
+      <testcase classname="biblioj.LivreTests" name="testNombreExemplaires" time="0.023" />
 
-      <testcase classname="biblioj.LivreTests" name="testNombreExemplairesDisponibles" time="0.017" />
+      <testcase classname="biblioj.LivreTests" name="testNombreExemplairesDisponibles" time="0.033" />
 
-      <testcase classname="biblioj.LivreTests" name="testNullable" time="0.024" />
+      <testcase classname="biblioj.LivreTests" name="testType" time="0.045" />
 
-      <testcase classname="biblioj.LivreTests" name="testType" time="0.019" />
-
-      <system-out><![CDATA[--Output from testBlank--
+      <system-out><![CDATA[--Output from testNullable--
+--Output from testBlank--
 --Output from testToString--
 --Output from testTitre--
 --Output from testNombreExemplaires--
 --Output from testNombreExemplairesDisponibles--
---Output from testNullable--
 --Output from testType--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testBlank--
+      <system-err><![CDATA[--Output from testNullable--
+--Output from testBlank--
 --Output from testToString--
 --Output from testTitre--
 --Output from testNombreExemplaires--
 --Output from testNombreExemplairesDisponibles--
---Output from testNullable--
 --Output from testType--
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="stage" id="6" name="ReservationControllerTests" package="biblioj" tests="8" time="1.421" timestamp="2014-04-22T08:57:09">
+  <testsuite errors="2" failures="0" hostname="stage" id="6" name="ReservationControllerTests" package="biblioj" tests="8" time="2.154" timestamp="2014-04-22T22:15:35">
       <properties />
 
-      <testcase classname="biblioj.ReservationControllerTests" name="testIndex" time="0.353" />
+      <testcase classname="biblioj.ReservationControllerTests" name="testIndex" time="0.888" />
 
-      <testcase classname="biblioj.ReservationControllerTests" name="testList" time="0.088" />
+      <testcase classname="biblioj.ReservationControllerTests" name="testSave" time="0.401" />
 
-      <testcase classname="biblioj.ReservationControllerTests" name="testShow" time="0.405" />
+      <testcase classname="biblioj.ReservationControllerTests" name="testCreate" time="0.096" />
 
-      <testcase classname="biblioj.ReservationControllerTests" name="testCreate" time="0.073" />
+      <testcase classname="biblioj.ReservationControllerTests" name="testShow" time="0.091" />
 
-      <testcase classname="biblioj.ReservationControllerTests" name="testSave" time="0.091" />
-
-      <testcase classname="biblioj.ReservationControllerTests" name="testEdit" time="0.09" />
-
-      <testcase classname="biblioj.ReservationControllerTests" name="testUpdate" time="0.092">
-          <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/reservation/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
-
-assert view == &quot;/reservation/edit&quot;
-       |    |
-       null false
-
-	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:118)
-</failure>
+      <testcase classname="biblioj.ReservationControllerTests" name="testEdit" time="0.106">
+          <error message="No signature of method: biblioj.ReservationController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), add(), list(), add(java.lang.Long)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.ReservationController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), add(), list(), add(java.lang.Long)
+	at biblioj.ReservationControllerTests.testEdit(ReservationControllerTests.groovy:82)
+</error>
 
       </testcase>
 
-      <testcase classname="biblioj.ReservationControllerTests" name="testDelete" time="0.101" />
+      <testcase classname="biblioj.ReservationControllerTests" name="testUpdate" time="0.124">
+          <error message="No signature of method: biblioj.ReservationController.update() is applicable for argument types: () values: []&#xa;Possible solutions: create(), putAt(java.lang.String, java.lang.Object), delete(), save(), delete(java.lang.Long), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.ReservationController.update() is applicable for argument types: () values: []
+Possible solutions: create(), putAt(java.lang.String, java.lang.Object), delete(), save(), delete(java.lang.Long), split(groovy.lang.Closure)
+	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:100)
+</error>
+
+      </testcase>
+
+      <testcase classname="biblioj.ReservationControllerTests" name="testDelete" time="0.126" />
+
+      <testcase classname="biblioj.ReservationControllerTests" name="testList" time="0.092" />
 
       <system-out><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-out>
 
       <system-err><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="stage" id="7" name="ReservationTests" package="biblioj" tests="4" time="0.382" timestamp="2014-04-22T08:57:11">
+  <testsuite errors="0" failures="0" hostname="stage" id="7" name="ReservationTests" package="biblioj" tests="4" time="0.49" timestamp="2014-04-22T22:15:37">
       <properties />
 
-      <testcase classname="biblioj.ReservationTests" name="testNullable" time="0.078" />
+      <testcase classname="biblioj.ReservationTests" name="testNullable" time="0.098" />
 
-      <testcase classname="biblioj.ReservationTests" name="testCode" time="0.018" />
+      <testcase classname="biblioj.ReservationTests" name="testCode" time="0.05" />
 
-      <testcase classname="biblioj.ReservationTests" name="testDateReservation" time="0.03" />
+      <testcase classname="biblioj.ReservationTests" name="testDateReservation" time="0.038" />
 
-      <testcase classname="biblioj.ReservationTests" name="testUnique" time="0.093" />
+      <testcase classname="biblioj.ReservationTests" name="testUnique" time="0.092" />
 
       <system-out><![CDATA[--Output from testNullable--
 --Output from testCode--
@@ -333,22 +412,20 @@ assert view == &quot;/reservation/edit&quot;
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="stage" id="8" name="TypeDocumentControllerTests" package="biblioj" tests="8" time="0.977" timestamp="2014-04-22T08:57:11">
+  <testsuite errors="0" failures="1" hostname="stage" id="8" name="TypeDocumentControllerTests" package="biblioj" tests="8" time="1.339" timestamp="2014-04-22T22:15:38">
       <properties />
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testIndex" time="0.326" />
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testIndex" time="0.457" />
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testList" time="0.075" />
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testSave" time="0.178" />
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testShow" time="0.11" />
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testCreate" time="0.073" />
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testCreate" time="0.082" />
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testShow" time="0.247" />
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testSave" time="0.102" />
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testEdit" time="0.079" />
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testEdit" time="0.078" />
-
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testUpdate" time="0.103">
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testUpdate" time="0.095">
           <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/typeDocument/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert view == &quot;/typeDocument/edit&quot;
@@ -360,37 +437,39 @@ assert view == &quot;/typeDocument/edit&quot;
 
       </testcase>
 
-      <testcase classname="biblioj.TypeDocumentControllerTests" name="testDelete" time="0.075" />
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testDelete" time="0.097" />
+
+      <testcase classname="biblioj.TypeDocumentControllerTests" name="testList" time="0.083" />
 
       <system-out><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-out>
 
       <system-err><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="stage" id="9" name="TypeDocumentTests" package="biblioj" tests="3" time="0.417" timestamp="2014-04-22T08:57:08">
+  <testsuite errors="0" failures="0" hostname="stage" id="9" name="TypeDocumentTests" package="biblioj" tests="3" time="0.532" timestamp="2014-04-22T22:15:33">
       <properties />
 
-      <testcase classname="biblioj.TypeDocumentTests" name="testIntitul" time="0.22" />
+      <testcase classname="biblioj.TypeDocumentTests" name="testIntitul" time="0.278" />
 
-      <testcase classname="biblioj.TypeDocumentTests" name="testBlank" time="0.051" />
+      <testcase classname="biblioj.TypeDocumentTests" name="testBlank" time="0.072" />
 
-      <testcase classname="biblioj.TypeDocumentTests" name="testToString" time="0.02" />
+      <testcase classname="biblioj.TypeDocumentTests" name="testToString" time="0.058" />
 
       <system-out><![CDATA[--Output from testIntitul--
 --Output from testBlank--

@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="stage" name="biblioj.CartControllerTests" tests="1" time="4.838" timestamp="2014-04-22T08:56:56">
+<testsuite errors="2" failures="0" hostname="stage" name="biblioj.CartControllerTests" tests="4" time="6.996" timestamp="2014-04-22T22:15:18">
   <properties />
-  <testcase classname="biblioj.CartControllerTests" name="testSomething" time="3.959">
-    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at biblioj.CartControllerTests.testSomething(CartControllerTests.groovy:15)
-</failure>
+  <testcase classname="biblioj.CartControllerTests" name="testRemove" time="4.453">
+    <error message="Cannot cast object &apos;null&apos; with class &apos;null&apos; to class &apos;int&apos;. Try &apos;java.lang.Integer&apos; instead" type="org.codehaus.groovy.runtime.typehandling.GroovyCastException">org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object &apos;null&apos; with class &apos;null&apos; to class &apos;int&apos;. Try &apos;java.lang.Integer&apos; instead
+	at biblioj.CartController.remove(CartController.groovy:34)
+	at biblioj.CartControllerTests.testRemove(CartControllerTests.groovy:54)
+</error>
   </testcase>
-  <system-out><![CDATA[--Output from testSomething--
+  <testcase classname="biblioj.CartControllerTests" name="testAdd" time="0.232">
+    <error message="No signature of method: biblioj.Livre.get() is applicable for argument types: () values: []&#xa;Possible solutions: get(java.io.Serializable), getId(), grep(), grep(java.lang.Object), getAt(java.lang.String), wait()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: biblioj.Livre.get() is applicable for argument types: () values: []
+Possible solutions: get(java.io.Serializable), getId(), grep(), grep(java.lang.Object), getAt(java.lang.String), wait()
+	at biblioj.CartController.add(CartController.groovy:22)
+	at biblioj.CartControllerTests.testAdd(CartControllerTests.groovy:39)
+</error>
+  </testcase>
+  <testcase classname="biblioj.CartControllerTests" name="testIndex" time="0.911" />
+  <testcase classname="biblioj.CartControllerTests" name="testList" time="0.29" />
+  <system-out><![CDATA[--Output from testRemove--
+--Output from testAdd--
+--Output from testIndex--
+--Output from testList--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
+  <system-err><![CDATA[--Output from testRemove--
+--Output from testAdd--
+--Output from testIndex--
+--Output from testList--
 ]]></system-err>
 </testsuite>

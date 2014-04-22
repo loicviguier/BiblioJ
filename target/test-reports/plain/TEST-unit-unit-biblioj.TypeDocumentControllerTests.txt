@@ -1,33 +1,32 @@
 Testsuite: biblioj.TypeDocumentControllerTests
-Tests run: 8, Failures: 1, Errors: 0, Time elapsed: 0,977 sec
+Tests run: 8, Failures: 1, Errors: 0, Time elapsed: 1,339 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0,326 sec
-Testcase: testList took 0,075 sec
-Testcase: testShow took 0,11 sec
-Testcase: testCreate took 0,082 sec
-Testcase: testSave took 0,102 sec
-Testcase: testEdit took 0,078 sec
-Testcase: testUpdate took 0,102 sec
+Testcase: testIndex took 0,457 sec
+Testcase: testSave took 0,178 sec
+Testcase: testCreate took 0,073 sec
+Testcase: testShow took 0,247 sec
+Testcase: testEdit took 0,079 sec
+Testcase: testUpdate took 0,094 sec
 	FAILED
 Assertion failed: 
 
@@ -43,4 +42,5 @@ assert view == "/typeDocument/edit"
 
 	at biblioj.TypeDocumentControllerTests.testUpdate(TypeDocumentControllerTests.groovy:114)
 
-Testcase: testDelete took 0,075 sec
+Testcase: testDelete took 0,097 sec
+Testcase: testList took 0,083 sec

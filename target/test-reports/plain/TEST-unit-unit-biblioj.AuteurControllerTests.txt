@@ -1,66 +1,38 @@
 Testsuite: biblioj.AuteurControllerTests
-Tests run: 8, Failures: 0, Errors: 5, Time elapsed: 3,868 sec
+Tests run: 8, Failures: 0, Errors: 1, Time elapsed: 6,394 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 1,306 sec
-Testcase: testList took 1,168 sec
-Testcase: testShow took 0,476 sec
-Testcase: testCreate took 0,299 sec
+Testcase: testIndex took 1,76 sec
+Testcase: testSave took 2,969 sec
+Testcase: testCreate took 0,192 sec
+Testcase: testShow took 0,254 sec
+Testcase: testEdit took 0,18 sec
+Testcase: testUpdate took 0,292 sec
 	Caused an ERROR
-No signature of method: biblioj.AuteurController.create() is applicable for argument types: () values: []
-Possible solutions: grep(), chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map)
-groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.create() is applicable for argument types: () values: []
-Possible solutions: grep(), chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map)
-	at biblioj.AuteurControllerTests.testCreate(AuteurControllerTests.groovy:39)
+No signature of method: biblioj.AuteurController.update() is applicable for argument types: (java.lang.Long, java.sql.Timestamp) values: [1, 1970-01-01 00:59:59.999]
+Possible solutions: update(), update(java.lang.Long, java.lang.Long), create(), delete(), edit(), save()
+groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.update() is applicable for argument types: (java.lang.Long, java.sql.Timestamp) values: [1, 1970-01-01 00:59:59.999]
+Possible solutions: update(), update(java.lang.Long, java.lang.Long), create(), delete(), edit(), save()
+	at biblioj.AuteurControllerTests.testUpdate(AuteurControllerTests.groovy:135)
 
-Testcase: testSave took 0,104 sec
-	Caused an ERROR
-No signature of method: biblioj.AuteurController.save() is applicable for argument types: () values: []
-Possible solutions: wait(), show(), any(), wait(long), show(java.lang.Long), any(groovy.lang.Closure)
-groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.save() is applicable for argument types: () values: []
-Possible solutions: wait(), show(), any(), wait(long), show(java.lang.Long), any(groovy.lang.Closure)
-	at biblioj.AuteurControllerTests.testSave(AuteurControllerTests.groovy:45)
-
-Testcase: testEdit took 0,096 sec
-	Caused an ERROR
-No signature of method: biblioj.AuteurController.edit() is applicable for argument types: () values: []
-Possible solutions: wait(), wait(long), wait(long, int), list(), list(java.lang.Integer), with(groovy.lang.Closure)
-groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.edit() is applicable for argument types: () values: []
-Possible solutions: wait(), wait(long), wait(long, int), list(), list(java.lang.Integer), with(groovy.lang.Closure)
-	at biblioj.AuteurControllerTests.testEdit(AuteurControllerTests.groovy:79)
-
-Testcase: testUpdate took 0,136 sec
-	Caused an ERROR
-No signature of method: biblioj.AuteurController.update() is applicable for argument types: () values: []
-Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), isCase(java.lang.Object), use([Ljava.lang.Object;), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)
-groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.update() is applicable for argument types: () values: []
-Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), isCase(java.lang.Object), use([Ljava.lang.Object;), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)
-	at biblioj.AuteurControllerTests.testUpdate(AuteurControllerTests.groovy:97)
-
-Testcase: testDelete took 0,095 sec
-	Caused an ERROR
-No signature of method: biblioj.AuteurController.delete() is applicable for argument types: () values: []
-Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
-groovy.lang.MissingMethodException: No signature of method: biblioj.AuteurController.delete() is applicable for argument types: () values: []
-Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
-	at biblioj.AuteurControllerTests.testDelete(AuteurControllerTests.groovy:142)
-
+Testcase: testDelete took 0,248 sec
+Testcase: testList took 0,234 sec

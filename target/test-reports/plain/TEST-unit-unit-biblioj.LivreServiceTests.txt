@@ -1,15 +1,87 @@
 Testsuite: biblioj.LivreServiceTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0,185 sec
+Tests run: 10, Failures: 0, Errors: 10, Time elapsed: 0,436 sec
 ------------- Standard Output ---------------
---Output from testSomething--
+--Output from testrechercheLivrePrenom--
+--Output from testrechercheLivreNomPrenom--
+--Output from testrechercheLivreNomPrenomAucun--
+--Output from testrechercheLivreType--
+--Output from testrechercheLivreOffset--
+--Output from testrechercheLivreOrder--
+--Output from testrechercheLivreSort--
+--Output from testrechercheLivreOrderSort--
+--Output from testrechercheLivreTitre--
+--Output from testrechercheLivreNom--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
---Output from testSomething--
+--Output from testrechercheLivrePrenom--
+--Output from testrechercheLivreNomPrenom--
+--Output from testrechercheLivreNomPrenomAucun--
+--Output from testrechercheLivreType--
+--Output from testrechercheLivreOffset--
+--Output from testrechercheLivreOrder--
+--Output from testrechercheLivreSort--
+--Output from testrechercheLivreOrderSort--
+--Output from testrechercheLivreTitre--
+--Output from testrechercheLivreNom--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0,046 sec
-	FAILED
-junit.framework.AssertionFailedError: Implement me
-junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at biblioj.LivreServiceTests.testSomething(LivreServiceTests.groovy:15)
+Testcase: testrechercheLivrePrenom took 0,035 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivrePrenom(LivreServiceTests.groovy:43)
+
+Testcase: testrechercheLivreNomPrenom took 0,019 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNomPrenom(LivreServiceTests.groovy:50)
+
+Testcase: testrechercheLivreNomPrenomAucun took 0,009 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNomPrenomAucun(LivreServiceTests.groovy:57)
+
+Testcase: testrechercheLivreType took 0,01 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreType(LivreServiceTests.groovy:64)
+
+Testcase: testrechercheLivreOffset took 0,011 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOffset(LivreServiceTests.groovy:71)
+
+Testcase: testrechercheLivreOrder took 0,021 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOrder(LivreServiceTests.groovy:79)
+
+Testcase: testrechercheLivreSort took 0,039 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreSort(LivreServiceTests.groovy:85)
+
+Testcase: testrechercheLivreOrderSort took 0,027 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOrderSort(LivreServiceTests.groovy:91)
+
+Testcase: testrechercheLivreTitre took 0,017 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreTitre(LivreServiceTests.groovy:29)
+
+Testcase: testrechercheLivreNom took 0,027 sec
+	Caused an ERROR
+Cannot invoke method rechercheLivre() on null object
+java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNom(LivreServiceTests.groovy:36)
 

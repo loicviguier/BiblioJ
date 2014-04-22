@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="stage" name="biblioj.LivreServiceTests" tests="1" time="0.185" timestamp="2014-04-22T08:57:08">
+<testsuite errors="10" failures="0" hostname="stage" name="biblioj.LivreServiceTests" tests="10" time="0.436" timestamp="2014-04-22T22:15:34">
   <properties />
-  <testcase classname="biblioj.LivreServiceTests" name="testSomething" time="0.046">
-    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at biblioj.LivreServiceTests.testSomething(LivreServiceTests.groovy:15)
-</failure>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivrePrenom" time="0.035">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivrePrenom(LivreServiceTests.groovy:43)
+</error>
   </testcase>
-  <system-out><![CDATA[--Output from testSomething--
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreNomPrenom" time="0.019">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNomPrenom(LivreServiceTests.groovy:50)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreNomPrenomAucun" time="0.01">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNomPrenomAucun(LivreServiceTests.groovy:57)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreType" time="0.01">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreType(LivreServiceTests.groovy:64)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreOffset" time="0.011">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOffset(LivreServiceTests.groovy:71)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreOrder" time="0.022">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOrder(LivreServiceTests.groovy:79)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreSort" time="0.039">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreSort(LivreServiceTests.groovy:85)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreOrderSort" time="0.027">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreOrderSort(LivreServiceTests.groovy:91)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreTitre" time="0.017">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreTitre(LivreServiceTests.groovy:29)
+</error>
+  </testcase>
+  <testcase classname="biblioj.LivreServiceTests" name="testrechercheLivreNom" time="0.027">
+    <error message="Cannot invoke method rechercheLivre() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method rechercheLivre() on null object
+	at biblioj.LivreServiceTests.testrechercheLivreNom(LivreServiceTests.groovy:36)
+</error>
+  </testcase>
+  <system-out><![CDATA[--Output from testrechercheLivrePrenom--
+--Output from testrechercheLivreNomPrenom--
+--Output from testrechercheLivreNomPrenomAucun--
+--Output from testrechercheLivreType--
+--Output from testrechercheLivreOffset--
+--Output from testrechercheLivreOrder--
+--Output from testrechercheLivreSort--
+--Output from testrechercheLivreOrderSort--
+--Output from testrechercheLivreTitre--
+--Output from testrechercheLivreNom--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
+  <system-err><![CDATA[--Output from testrechercheLivrePrenom--
+--Output from testrechercheLivreNomPrenom--
+--Output from testrechercheLivreNomPrenomAucun--
+--Output from testrechercheLivreType--
+--Output from testrechercheLivreOffset--
+--Output from testrechercheLivreOrder--
+--Output from testrechercheLivreSort--
+--Output from testrechercheLivreOrderSort--
+--Output from testrechercheLivreTitre--
+--Output from testrechercheLivreNom--
 ]]></system-err>
 </testsuite>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="stage" name="biblioj.TypeDocumentControllerTests" tests="8" time="0.977" timestamp="2014-04-22T08:57:11">
+<testsuite errors="0" failures="1" hostname="stage" name="biblioj.TypeDocumentControllerTests" tests="8" time="1.339" timestamp="2014-04-22T22:15:38">
   <properties />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testIndex" time="0.326" />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testList" time="0.075" />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testShow" time="0.11" />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testCreate" time="0.082" />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testSave" time="0.102" />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testEdit" time="0.078" />
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testUpdate" time="0.103">
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testIndex" time="0.457" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testSave" time="0.178" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testCreate" time="0.073" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testShow" time="0.247" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testEdit" time="0.079" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testUpdate" time="0.095">
     <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/typeDocument/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert view == &quot;/typeDocument/edit&quot;
@@ -17,23 +16,24 @@ assert view == &quot;/typeDocument/edit&quot;
 	at biblioj.TypeDocumentControllerTests.testUpdate(TypeDocumentControllerTests.groovy:114)
 </failure>
   </testcase>
-  <testcase classname="biblioj.TypeDocumentControllerTests" name="testDelete" time="0.075" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testDelete" time="0.097" />
+  <testcase classname="biblioj.TypeDocumentControllerTests" name="testList" time="0.083" />
   <system-out><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-out>
   <system-err><![CDATA[--Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ]]></system-err>
 </testsuite>

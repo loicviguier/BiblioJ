@@ -44,11 +44,4 @@ class CartController {
 		redirect(action: "list")
 	}
 	
-	// TODO: Implémenter le save pour la reservation
-	def save() {
-		// Ne pas sauvegardé tout court si il existe des livre avec un nb d'exemplaire = 0 et revenir sur le panier
-		// Décrémenter au moment de la sauvegarde
-		// TODO: Une fois le panier traité -> session.removeAttribute('cart')
-	}
-	
 }

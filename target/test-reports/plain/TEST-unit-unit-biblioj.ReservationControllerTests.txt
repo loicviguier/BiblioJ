@@ -1,46 +1,45 @@
 Testsuite: biblioj.ReservationControllerTests
-Tests run: 8, Failures: 1, Errors: 0, Time elapsed: 1,421 sec
+Tests run: 8, Failures: 0, Errors: 2, Time elapsed: 2,154 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0,353 sec
-Testcase: testList took 0,088 sec
-Testcase: testShow took 0,405 sec
-Testcase: testCreate took 0,073 sec
-Testcase: testSave took 0,091 sec
-Testcase: testEdit took 0,09 sec
-Testcase: testUpdate took 0,091 sec
-	FAILED
-Assertion failed: 
+Testcase: testIndex took 0,888 sec
+Testcase: testSave took 0,401 sec
+Testcase: testCreate took 0,096 sec
+Testcase: testShow took 0,091 sec
+Testcase: testEdit took 0,105 sec
+	Caused an ERROR
+No signature of method: biblioj.ReservationController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), add(), list(), add(java.lang.Long)
+groovy.lang.MissingMethodException: No signature of method: biblioj.ReservationController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), add(), list(), add(java.lang.Long)
+	at biblioj.ReservationControllerTests.testEdit(ReservationControllerTests.groovy:82)
 
-assert view == "/reservation/edit"
-       |    |
-       null false
+Testcase: testUpdate took 0,123 sec
+	Caused an ERROR
+No signature of method: biblioj.ReservationController.update() is applicable for argument types: () values: []
+Possible solutions: create(), putAt(java.lang.String, java.lang.Object), delete(), save(), delete(java.lang.Long), split(groovy.lang.Closure)
+groovy.lang.MissingMethodException: No signature of method: biblioj.ReservationController.update() is applicable for argument types: () values: []
+Possible solutions: create(), putAt(java.lang.String, java.lang.Object), delete(), save(), delete(java.lang.Long), split(groovy.lang.Closure)
+	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:100)
 
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert view == "/reservation/edit"
-       |    |
-       null false
-
-	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:118)
-
-Testcase: testDelete took 0,102 sec
+Testcase: testDelete took 0,126 sec
+Testcase: testList took 0,092 sec

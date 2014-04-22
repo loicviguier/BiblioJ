@@ -1,29 +1,47 @@
 Testsuite: biblioj.LivreControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 3,188 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 2,044 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testIndex--
---Output from testList--
---Output from testShow--
---Output from testCreate--
 --Output from testSave--
+--Output from testCreate--
+--Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
 --Output from testDelete--
+--Output from testList--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0,424 sec
-Testcase: testList took 0,143 sec
-Testcase: testShow took 0,206 sec
+Testcase: testIndex took 0,497 sec
+Testcase: testSave took 0,221 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/livre/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12258bc
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/livre/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@12258bc
+
+	at biblioj.LivreControllerTests.testSave(LivreControllerTests.groovy:60)
+
+Testcase: testCreate took 0,275 sec
+Testcase: testShow took 0,196 sec
 	FAILED
 Assertion failed: 
 
@@ -41,26 +59,7 @@ assert livre.save() != null
 
 	at biblioj.LivreControllerTests.testShow(LivreControllerTests.groovy:74)
 
-Testcase: testCreate took 0,106 sec
-Testcase: testSave took 1,756 sec
-	FAILED
-Assertion failed: 
-
-assert response.redirectedUrl == '/livre/show/1'
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@7953ef
-
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert response.redirectedUrl == '/livre/show/1'
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@7953ef
-
-	at biblioj.LivreControllerTests.testSave(LivreControllerTests.groovy:60)
-
-Testcase: testEdit took 0,108 sec
+Testcase: testEdit took 0,138 sec
 	FAILED
 Assertion failed: 
 
@@ -78,7 +77,7 @@ assert livre.save() != null
 
 	at biblioj.LivreControllerTests.testEdit(LivreControllerTests.groovy:92)
 
-Testcase: testUpdate took 0,155 sec
+Testcase: testUpdate took 0,113 sec
 	FAILED
 Assertion failed: 
 
@@ -96,7 +95,7 @@ assert livre.save() != null
 
 	at biblioj.LivreControllerTests.testUpdate(LivreControllerTests.groovy:112)
 
-Testcase: testDelete took 0,133 sec
+Testcase: testDelete took 0,11 sec
 	FAILED
 Assertion failed: 
 
@@ -114,3 +113,4 @@ assert livre.save() != null
 
 	at biblioj.LivreControllerTests.testDelete(LivreControllerTests.groovy:156)
 
+Testcase: testList took 0,241 sec
