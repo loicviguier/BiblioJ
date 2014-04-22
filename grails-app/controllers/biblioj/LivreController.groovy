@@ -14,7 +14,7 @@ class LivreController {
 		params.max = Math.min(max ?: 5, 100)
 
 		LivreService livreResultantList = new LivreService()
-		livreResultantList.rechercheLivre(params, null) //(params,reservation)
+		livreResultantList.rechercheLivre(params)
     }
 
     def create() {

@@ -1,7 +1,7 @@
---Output from testNullable--
 --Output from testBlank--
 --Output from testToString--
 --Output from testTitre--
 --Output from testNombreExemplaires--
 --Output from testNombreExemplairesDisponibles--
+--Output from testNullable--
 --Output from testType--

@@ -52,7 +52,7 @@
 				</tbody>
 			</table>
 			<fieldset class="buttons">
-				<g:actionSubmit class="save" controller="reservation" action="save" value="Valider la reservation"/>
+				<g:link class="buttons" controller="reservation" action="add" id = "${session.getAttribute("idReservation")}">Valider la reservation</g:link>
 			</fieldset>
 		</div>
 	</body>

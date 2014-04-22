@@ -42,6 +42,7 @@
 					</table>
 				</g:else>
 				</g:if>
+				<g:link class="buttons" controller="reservation" action="add" id = "${session.getAttribute("idReservation")}">Valider le panier</g:link>
 			</div>
 		</div>
 	

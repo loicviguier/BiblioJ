@@ -1,5 +1,7 @@
 package biblioj
 
+import java.sql.Timestamp;
+
 class Livre {
 	
 	String titre
@@ -9,6 +11,10 @@ class Livre {
 	static hasMany = [reservations:Reservation, auteurs:Auteur]
 	static belongsTo = Reservation
 	TypeDocument type;
+	
+	static fetchMode = [auteurs : 'eager']
+	
+	Timestamp version
 	
     static constraints = {
 		titre blank:false

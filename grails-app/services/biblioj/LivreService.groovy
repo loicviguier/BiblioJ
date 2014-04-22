@@ -5,10 +5,10 @@ import java.util.Map;
 import org.hibernate.Criteria
 class LivreService {
 
-	def rechercheLivre(Map params, Reservation reservation) {
-
+	def rechercheLivre(Map params) {
+		
 		def livreResultantList = getLivre(params)
-		[livreInstanceList:livreResultantList, livreInstanceTotal: livreResultantList.totalCount, reservationInstance : reservation]
+		[livreInstanceList:livreResultantList, livreInstanceTotal: livreResultantList.totalCount]
     }
 	
 	def getLivre(Map params) {
@@ -46,7 +46,7 @@ class LivreService {
 			}
 			
 			if(typeRecherche) {
-					createAlias ("type", "typeDoc") 
+					createAlias ("type", "typeDoc")
 					ilike("typeDoc.intitul","%$typeRecherche")
 			}
 		}

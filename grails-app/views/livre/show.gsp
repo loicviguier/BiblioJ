@@ -60,16 +60,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${livreInstance?.reservations}">
-				<li class="fieldcontain">
-					<span id="reservations-label" class="property-label"><g:message code="livre.reservations.label" default="Reservations" /></span>
-					
-						<g:each in="${livreInstance.reservations}" var="r">
-						<span class="property-value" aria-labelledby="reservations-label"><g:link controller="reservation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
 			
 				<g:if test="${livreInstance?.type}">
 				<li class="fieldcontain">

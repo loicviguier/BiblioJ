@@ -1,116 +1,46 @@
 Testsuite: biblioj.ReservationControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1,74 sec
+Tests run: 8, Failures: 1, Errors: 0, Time elapsed: 1,421 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
+--Output from testShow--
 --Output from testCreate--
 --Output from testSave--
---Output from testDelete--
---Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
+--Output from testDelete--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testIndex--
 --Output from testList--
+--Output from testShow--
 --Output from testCreate--
 --Output from testSave--
---Output from testDelete--
---Output from testShow--
 --Output from testEdit--
 --Output from testUpdate--
+--Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0,59 sec
-Testcase: testList took 0,162 sec
-Testcase: testCreate took 0,135 sec
-Testcase: testSave took 0,14 sec
+Testcase: testIndex took 0,353 sec
+Testcase: testList took 0,088 sec
+Testcase: testShow took 0,405 sec
+Testcase: testCreate took 0,073 sec
+Testcase: testSave took 0,091 sec
+Testcase: testEdit took 0,09 sec
+Testcase: testUpdate took 0,091 sec
 	FAILED
 Assertion failed: 
 
-assert response.redirectedUrl == '/reservation/show/1'
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1c8cd04
+assert view == "/reservation/edit"
+       |    |
+       null false
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
-assert response.redirectedUrl == '/reservation/show/1'
-       |        |             |
-       |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1c8cd04
+assert view == "/reservation/edit"
+       |    |
+       null false
 
-	at biblioj.ReservationControllerTests.testSave(ReservationControllerTests.groovy:58)
+	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:118)
 
-Testcase: testDelete took 0,119 sec
-	FAILED
-Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@1989b88 (toString() threw groovy.lang.MissingMethodException)
-
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@1989b88 (toString() threw groovy.lang.MissingMethodException)
-
-	at biblioj.ReservationControllerTests.testDelete(ReservationControllerTests.groovy:154)
-
-Testcase: testShow took 0,135 sec
-	FAILED
-Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@b1efc4 (toString() threw groovy.lang.MissingMethodException)
-
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@b1efc4 (toString() threw groovy.lang.MissingMethodException)
-
-	at biblioj.ReservationControllerTests.testShow(ReservationControllerTests.groovy:72)
-
-Testcase: testEdit took 0,135 sec
-	FAILED
-Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@1ad956d (toString() threw groovy.lang.MissingMethodException)
-
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@1ad956d (toString() threw groovy.lang.MissingMethodException)
-
-	at biblioj.ReservationControllerTests.testEdit(ReservationControllerTests.groovy:90)
-
-Testcase: testUpdate took 0,131 sec
-	FAILED
-Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@10452d6 (toString() threw groovy.lang.MissingMethodException)
-
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert reservation.save() != null
-       |           |      |
-       |           null   false
-       biblioj.Reservation@10452d6 (toString() threw groovy.lang.MissingMethodException)
-
-	at biblioj.ReservationControllerTests.testUpdate(ReservationControllerTests.groovy:110)
-
+Testcase: testDelete took 0,102 sec

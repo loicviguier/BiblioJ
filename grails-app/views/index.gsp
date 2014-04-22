@@ -96,6 +96,7 @@
 					<li><g:link class="controller" controller="livre" action="index">Livres en rayon</g:link></li>
 					<li><g:link class="controller" controller="auteur" action="index">Auteurs</g:link></li>
 					<li><g:link class="controller" controller="cart" action="index">Panier</g:link></li>
+					<li><g:link class="controller" controller="reservation" action="index">Liste des reservations</g:link></li>
 				</ul>
 			</div>
 		</div>

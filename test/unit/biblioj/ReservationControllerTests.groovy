@@ -15,7 +15,7 @@ class ReservationControllerTests {
     def populateValidParams(params) {
         assert params != null
         // TODO: Populate valid properties like...	
-        params["code"] = 'test'
+        params["code"] = '123'
 		params["dateReservation"] = new Date() + 2
     }
 	

@@ -41,45 +41,45 @@ class ReservationController {
         [reservationInstance: reservationInstance]
     }
 
-    def edit(Long id) {
-        def reservationInstance = Reservation.get(id)
-        if (!reservationInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'reservation.label', default: 'Reservation'), id])
-            redirect(action: "list")
-            return
-        }
+//    def edit(Long id) {
+//        def reservationInstance = Reservation.get(id)
+//        if (!reservationInstance) {
+//            flash.message = message(code: 'default.not.found.message', args: [message(code: 'reservation.label', default: 'Reservation'), id])
+//            redirect(action: "list")
+//            return
+//        }
+//
+//        [reservationInstance: reservationInstance]
+//    }
 
-        [reservationInstance: reservationInstance]
-    }
-
-    def update(Long id, Long version) {
-        def reservationInstance = Reservation.get(id)
-        if (!reservationInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'reservation.label', default: 'Reservation'), id])
-            redirect(action: "list")
-            return
-        }
-
-        if (version != null) {
-            if (reservationInstance.version > version) {
-                reservationInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'reservation.label', default: 'Reservation')] as Object[],
-                          "Another user has updated this Reservation while you were editing")
-                render(view: "edit", model: [reservationInstance: reservationInstance])
-                return
-            }
-        }
-
-        reservationInstance.properties = params
-
-        if (!reservationInstance.save(flush: true)) {
-            render(view: "edit", model: [reservationInstance: reservationInstance])
-            return
-        }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'reservation.label', default: 'Reservation'), reservationInstance.id])
-        redirect(action: "show", id: reservationInstance.id)
-    }
+//    def update(Long id, Long version) {
+//        def reservationInstance = Reservation.get(id)
+//        if (!reservationInstance) {
+//            flash.message = message(code: 'default.not.found.message', args: [message(code: 'reservation.label', default: 'Reservation'), id])
+//            redirect(action: "list")
+//            return
+//        }
+//
+//        if (version != null) {
+//            if (reservationInstance.version > version) {
+//                reservationInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
+//                          [message(code: 'reservation.label', default: 'Reservation')] as Object[],
+//                          "Another user has updated this Reservation while you were editing")
+//                render(view: "edit", model: [reservationInstance: reservationInstance])
+//                return
+//            }
+//        }
+//
+//        reservationInstance.properties = params
+//
+//        if (!reservationInstance.save(flush: true)) {
+//            render(view: "edit", model: [reservationInstance: reservationInstance])
+//            return
+//        }
+//
+//        flash.message = message(code: 'default.updated.message', args: [message(code: 'reservation.label', default: 'Reservation'), reservationInstance.id])
+//        redirect(action: "show", id: reservationInstance.id)
+//    }
 
     def delete(Long id) {
         def reservationInstance = Reservation.get(id)
@@ -100,21 +100,31 @@ class ReservationController {
         }
     }
 	
-	def ajouterLivreReservation(long idReservation) {
-		def reservation = Reservation.get(idReservation)
-		def livre = session['cart']
+	def add(Long id) {
+		def res = Reservation.get(id)
+		ReservationService reservationService = new ReservationService()
+		boolean allReserved = true
+		if(res == null) {
+            res = reservationService.createReservation()
+            session.setAttribute("idReservation", res.id)
+		}
+
+		List<Livre> livre = session['cart']
 		
 		livre.each {
-			if(it.nombreExemplairesDisponibles > 0) {
+			if(it.nombreExemplairesDisponibles > 0 ) {
 				it.nombreExemplairesDisponibles --
-				reservation.addToLivres(it)
+				res.livres << it
+			} else {
+				allReserved = false
 			}
+		}	
+		if(allReserved) {
+			session.setAttribute("idReservation", -1)
+			session.setAttribute("cart", null)
 		}
-		reservation.save()
-		redirect(action: "list",controller : "livre")
+		res.save()
+		redirect(action: "show", controller:"reservation", id : res.id)
 	}
 	
-	def validerReservation (long idReservation) {
-		def reservation = Reservation.get(idReservation)
-	}
 }

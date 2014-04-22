@@ -87,7 +87,7 @@
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${livreInstanceTotal}" />
+				<g:paginate total="${livreInstanceTotal}" params="${params }"/>
 			</div>
 		</div>
 	</body>
